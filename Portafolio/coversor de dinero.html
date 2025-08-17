@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Conversor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Conversor USD → PAB</h2>
+  <input type="number" id="usd" placeholder="Dólares">
+  <button onclick="convertir()">Convertir</button>
+  <p id="pab"></p>
+
+  <script>
+    function convertir() {
+      const usd = parseFloat(document.getElementById('usd').value);
+      const pab = usd * 1; // 1 USD = 1 PAB
+      document.getElementById('pab').textContent = 'Balboas: ' + pab.toFixed(2);
+    }
+  </script>
+</body>
+</html>
